@@ -30,7 +30,7 @@ import glob, os
 
 #image importing and resizing
 
-img = cv2.imread("import\coffee.png")
+img = cv2.imread("import\coffee3.png")
 
 
 x,y = img.shape[1], img.shape[0] 

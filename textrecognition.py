@@ -35,14 +35,14 @@ text = text1.read(5)
 #else:
 #    print("please try again")
 
-if text == "EITTE":
+if text == "EITTE" or text == "BITTE":
     print("BITTE WÄHLEN")
 
 elif text == "GERIT":
     print("GERÄT HEIZT AUF")
 
 elif text == "PFLIO":
-    print("PFLEGE DRÜCKEN)")
+    print("PFLEGE DRÜCKEN")
 
 else:
     print("please try again")
