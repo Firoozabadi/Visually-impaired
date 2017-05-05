@@ -66,5 +66,5 @@ cv2.imwrite ('final.png',final)
 im = Image.open('final.png')
 
 
-#text = pytesseract.image_to_string(im, lang='en')
+text = pytesseract.image_to_string(im, lang='en')
 
