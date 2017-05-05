@@ -25,11 +25,13 @@ from PIL import Image, ImageFilter
 import PIL.ImageOps
 import glob, os
 
-import pytesseract 
+import pytesseract
+
 
 #image importing and resizing
 
 img = cv2.imread("import\coffee.png")
+
 
 x,y = img.shape[1], img.shape[0] 
 size =1000,500
@@ -59,34 +61,10 @@ cv2.imwrite ('result\dilation.png',dilation)
 erosion = cv2.erode(dilation,kernel2,iterations = 1)
 cv2.imwrite ('result\erosion.png',erosion)
 final = cv2.dilate(erosion,kernel3,iterations = 1)
-cv2.imwrite ('result\final.png',final)
+cv2.imwrite ('final.png',final)
 
-# in meanwhile import the final.png and save the result as "tesseract" in result dir
+im = Image.open('final.png')
 
-text1 = open ("result\tesseract.txt", "r")
-text = text1.read(5)
 
-#if saleh3 == "EITTE" or "BITTE":
-#    print("BITTE WÄHLEN")
-#
-#elif saleh3 == "GERIT" or "whatever similar":
-#    print("GERÄT HEIZT AUF")
-#
-#elif saleh3 == "PFLIO" or "whatever similar":
-#    print("PFLEGE DRÜCKEN)")
-#
-#else:
-#    print("please try again")
-
-if saleh3 == "EITTE":
-    print("BITTE WÄHLEN")
-
-elif saleh3 == "GERIT":
-    print("GERÄT HEIZT AUF")
-
-elif saleh3 == "PFLIO":
-    print("PFLEGE DRÜCKEN)")
-
-else:
-    print("please try again")
+#text = pytesseract.image_to_string(im, lang='en')
 
