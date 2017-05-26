@@ -45,10 +45,10 @@ cv2.imwrite ('final.png',final)
 # Cropping the image in left and up
 
 ixx = np.argmin(final, axis=0) # index of first zero in columns
-xmin = np.min(ixx[np.nonzero(ixx)]) # the lowest nonzero value in ixx showing the lowest row # containing zero
+ymin = np.min(ixx[np.nonzero(ixx)]) # the lowest nonzero value in ixx showing the lowest row # containing zero
 
 ixy = np.argmin(final, axis=1) 
-ymin = np.min(ixy[np.nonzero(ixy)]) 
+xmin = np.min(ixy[np.nonzero(ixy)]) 
 
 
 # Cropping the image in right and down
@@ -57,10 +57,13 @@ flipudfinal = np.flipud(final)
 flipfinal = np.fliplr(flipudfinal)
 
 ixx2 = np.argmin(flipfinal, axis=0)
-xmaxtemp = np.min(ixx2[np.nonzero(ixx2)])
-xmax = x-1-xmaxtemp
-
-ixy2 = np.argmin(flipfinal, axis=1) 
-ymaxtemp = np.min(ixy2[np.nonzero(ixy2)]) 
+ymaxtemp = np.min(ixx2[np.nonzero(ixx2)])
 ymax = y-1-ymaxtemp
 
+ixy2 = np.argmin(flipfinal, axis=1) 
+xmaxtemp = np.min(ixy2[np.nonzero(ixy2)]) 
+xmax = x-1-xmaxtemp
+
+print (xmax, ymax, xmin, ymin)
+
+sepideh = final[ymin:ymax ,xmin:xmax]
