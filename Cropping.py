@@ -18,11 +18,13 @@ import glob, os
 
 #image importing and resizing
 
-img = cv2.imread ("import\saleh.png")
+img = cv2.imread ("import\saleh2.png")
 
 size =1000,500
 imgresized = cv2.resize(img,size)
 x,y = imgresized.shape[1], imgresized.shape[0] 
+cv2.imwrite ('imgresized.png',imgresized)
+#plt.imshow(imgresized)
 
 #image modification
 img_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (1, 5))
@@ -36,9 +38,9 @@ kernel1 = np.ones((7,7),np.uint8)
 kernel2 = np.ones((25,25),np.uint8)
 kernel3 = np.ones((5,5),np.uint8)
 dilation = cv2.dilate(img_thresh1,kernel1,iterations = 1)
-cv2.imwrite ('result\dilation.png',dilation)
+cv2.imwrite ('dilation.png',dilation)
 erosion = cv2.erode(dilation,kernel2,iterations = 1)
-cv2.imwrite ('result\erosion.png',erosion)
+cv2.imwrite ('erosion.png',erosion)
 final = cv2.dilate(erosion,kernel3,iterations = 1)
 cv2.imwrite ('final.png',final)
 
@@ -67,3 +69,4 @@ xmax = x-1-xmaxtemp
 print (xmax, ymax, xmin, ymin)
 
 sepideh = final[ymin:ymax ,xmin:xmax]
+plt.imshow(sepideh)
