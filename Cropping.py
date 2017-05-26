@@ -68,5 +68,5 @@ xmax = x-1-xmaxtemp
 
 print (xmax, ymax, xmin, ymin)
 
-sepideh = final[ymin:ymax ,xmin:xmax]
-plt.imshow(sepideh)
+final2 = final[ymin:ymax ,xmin:xmax]
+plt.imshow(final2)
