@@ -20,3 +20,6 @@ Lsqversion.py
 
 
 To Do:
+
+Finding the most suitable images to use as reference
+Try to find the best kernel parameters to obtain the best fittings in different image qualities
