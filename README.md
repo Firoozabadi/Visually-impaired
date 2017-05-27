@@ -7,15 +7,20 @@ First method: using tesseract
 3) Use tesseract application, import "final.png" and export "tesseract"
 4) Run "textrecognition.py" to see the text
 
+
 Second method: LSQ
 
 Done:
 
-imageprocessing.py
+imageprocessing.py:
+
     makes images blured, gray scale
     makes similar the images with different qualities using "erosion" and "dilation"
     crop the images to the edge of the text
-Lsqversion.py
+    
+    
+Lsqversion.py:
+
     compares references with the imported images using the "Least square fitting"
 
 
