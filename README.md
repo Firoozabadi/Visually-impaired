@@ -14,9 +14,9 @@ Done:
 
 imageprocessing.py:
 
-    makes images blured, gray scale
-    makes similar the images with different qualities using "erosion" and "dilation"
-    crop the images to the edge of the text
+    1) makes images blured, gray scale
+    2) makes similar the images with different qualities using "erosion" and "dilation"
+    3) crop the images to the edge of the text
     
     
 Lsqversion.py:
