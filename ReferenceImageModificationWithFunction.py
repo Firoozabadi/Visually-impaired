@@ -9,9 +9,9 @@ Created on Fri Apr 21 09:22:52 2017
 
 import numpy as np
 from matplotlib import pyplot as plt
-from imutils.perspective import four_point_transform
-from imutils import contours
-import imutils
+#from imutils.perspective import four_point_transform
+#from imutils import contours
+#import imutils
 import cv2
 from PIL import Image, ImageFilter
 import PIL.ImageOps
@@ -25,6 +25,7 @@ def imageprocessing (img):
     x,y = img.shape[1], img.shape[0] 
     size =1000,500
     imgresized = cv2.resize(img,size)
+    
 
 #image modification
 
@@ -41,22 +42,22 @@ def imageprocessing (img):
     kernel3 = np.ones((5,5),np.uint8)
     dilation = cv2.dilate(img_thresh1,kernel1,iterations = 1)
     erosion = cv2.erode(dilation,kernel2,iterations = 1)
-    saleh = cv2.dilate(erosion,kernel3,iterations = 1)
-    return [final]
+    final = cv2.dilate(erosion,kernel3,iterations = 1)
+    return final;
 
 
 img1 = cv2.imread("import\coffee1.png")
-imageprocessing (img1)
-cv2.imwrite ('final1.png',final)
-
+temp1 = imageprocessing (img1)
+cv2.imwrite ('final1.png',temp1)
+#np.del (final)
 
 img2 = cv2.imread("import\coffee2.png")
-imageprocessing (img1)
-cv2.imwrite ('final2.png',final)
+temp2 = imageprocessing (img2)
+cv2.imwrite ('final2.png',temp2)
 
 img3 = cv2.imread("import\coffee3.png")
-imageprocessing (img1)
-cv2.imwrite ('final3.png',final)
+temp3 = imageprocessing (img3)
+cv2.imwrite ('final3.png',temp3)
 
 
 '''
