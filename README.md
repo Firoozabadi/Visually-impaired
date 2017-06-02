@@ -16,7 +16,8 @@ imageprocessing.py:
 
     1) makes images blured, gray scale
     2) makes similar the images with different qualities using "erosion" and "dilation"
-    3) crop the images to the edge of the text
+    3) crop the images to the edge of the text for the close images
+    4) Modification of the cropping for the far images
     
     
 Lsqversion.py:
