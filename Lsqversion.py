@@ -3,6 +3,11 @@
 Created on Fri Apr 21 09:22:52 2017
 
 @author: Saleh Firoozabadi
+
+
+
+The img has to be a matrix or an imported image using "cv2.imread (.jpg)" cmd
+
 """
 
 import numpy as np
@@ -15,63 +20,62 @@ from PIL import Image, ImageFilter
 import PIL.ImageOps
 import glob, os
 
+import im_processing from im_processing
+
+
 #image importing and resizing
 
-ref1 = cv2.imread("ref1.png")
-ref2 = cv2.imread("ref2.png")
-ref3 = cv2.imread("ref3.png")
+def LSQ (img):
+    
+    temp = im_processing (img)
+    
+    ref1 = cv2.imread("ref1.png")
+    ref2 = cv2.imread("ref2.png")
+    ref3 = cv2.imread("ref3.png")
+    
+    reference1 = ref1[:,:,0]
+    reference2 = ref2[:,:,0]
+    reference3 = ref3[:,:,0]
+    
+    
+    #-------------------------------------------------------------
+    
+    temp1 = np.multiply(np.subtract(reference1, temp),np.subtract(reference1, temp))
+    temp2 = np.multiply(np.subtract(reference2, temp),np.subtract(reference2, temp))
+    temp3 = np.multiply(np.subtract(reference3, temp),np.subtract(reference3, temp))
+    temp4 = np.multiply(np.subtract(reference4, temp),np.subtract(reference4, temp))
+    
+    dev1 = np.sum(temp1)
+    dev2 = np.sum(temp2)
+    dev3 = np.sum(temp3)
+    dev4 = np.sum(temp4)
+    
+    print (dev1)
+    print (dev2)
+    print (dev3)
+    print (dev4)
+    
+    if dev1 == min(dev1, dev2, dev3, dev4):
+#        print("BITTE WÄHLEN")
+        result = "BITTE WÄHLEN"
+    
+    elif dev2 == min(dev1, dev2, dev3, dev4):
+#        print("GERÄT HEIZT AUF")
+        result = "GERÄT HEIZT AUF"
+        
+    elif dev3 == min(dev1, dev2, dev3, dev4):
+#        print("PFLEGE DRÜCKEN")
+        result = "PFLEGE DRÜCKEN"
+    elif dev4 == min(dev1, dev2, dev3, dev4):
+#        print("PFLEGE DRÜCKEN")
+        result = "Wassera tank fullen"
+    else:
+#        print("please try again")
+        result = "PFLEGE DRÜCKEN"
+        
+    return result;
+    
 
-reference1 = ref1[:,:,0]
-reference2 = ref2[:,:,0]
-reference3 = ref3[:,:,0]
-
-img = cv2.imread ("import\IMG_20170512_133233.jpg")
-
-x,y = img.shape[1], img.shape[0] 
-size =1000,500
-imgresized = cv2.resize(img,size)
-
-#image modification
-
-img_kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (1, 5))
-img_gray = cv2.cvtColor(imgresized, cv2.COLOR_BGR2GRAY)
-img_blurred = cv2.GaussianBlur(img_gray, (5, 5), 0)
-img_thresh = cv2.threshold(img_blurred, 0, 255,
-                           cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
-img_thresh1 = cv2.morphologyEx(img_thresh, cv2.MORPH_OPEN, img_kernel)
-
-# dilation erosion
-
-kernel1 = np.ones((5,5),np.uint8)
-kernel2 = np.ones((25,25),np.uint8)
-kernel3 = np.ones((5,5),np.uint8)
-dilation = cv2.dilate(img_thresh1,kernel1,iterations = 1)
-erosion = cv2.erode(dilation,kernel2,iterations = 1)
-newfinal = cv2.dilate(erosion,kernel3,iterations = 1)
-cv2.imwrite ('newfinal.png',newfinal)
-
-#-------------------------------------------------------------
-
-temp1 = np.multiply(np.subtract(reference1, newfinal),np.subtract(reference1, newfinal))
-temp2 = np.multiply(np.subtract(reference2, newfinal),np.subtract(reference2, newfinal))
-temp3 = np.multiply(np.subtract(reference3, newfinal),np.subtract(reference3, newfinal))
-
-saleh1 = np.sum(temp1)
-saleh2 = np.sum(temp2)
-saleh3 = np.sum(temp3)
-
-print (saleh1)
-print (saleh2)
-print (saleh3)
-
-if saleh1 == min(saleh1, saleh2, saleh3):
-    print("BITTE WÄHLEN")
-
-elif saleh2 == min(saleh1, saleh2, saleh3):
-    print("GERÄT HEIZT AUF")
-
-elif saleh3 == min(saleh1, saleh2, saleh3):
-    print("PFLEGE DRÜCKEN")
-
-else:
-    print("please try again")
+img1 = cv2.imread ("p1.jpg")
+temp5 = LSQ (img1)
+print temp5

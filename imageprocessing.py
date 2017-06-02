@@ -69,151 +69,153 @@ def imageprocessing (img):
 
 #----------------------------------------------------------------------
 
-img1 = cv2.imread ('import\p1.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p1.jpg',temp1)
-
-img1 = cv2.imread ('import\p2.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p2.png',temp1)
-
-img1 = cv2.imread ('import\p3.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p3.png',temp1)
-
-img1 = cv2.imread ('import\p4.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p4.png',temp1)
-
-img1 = cv2.imread ('import\p5.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p5.png',temp1)
-
-img1 = cv2.imread ('import\p6.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p6.png',temp1)
-
-img1 = cv2.imread ('import\p7.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p7.png',temp1)
-
-img1 = cv2.imread ('import\p8.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p8.png',temp1)
-
-img1 = cv2.imread ('import\p9.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p9.png',temp1)
-
-img1 = cv2.imread ('import\p10.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p10.png',temp1)
-
-img1 = cv2.imread ('import\p11.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p11.png',temp1)
-
-img1 = cv2.imread ('import\p12.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p12.png',temp1)
-
-img1 = cv2.imread ('import\p13.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p13.png',temp1)
-
-img1 = cv2.imread ('import\p14.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p14.png',temp1)
-
-img1 = cv2.imread ('import\p15.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p15.png',temp1)
-
-img1 = cv2.imread ('import\p16.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p16.png',temp1)
-
-img1 = cv2.imread ('import\p17.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p17.png',temp1)
-
-img1 = cv2.imread ('import\p18.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p18.png',temp1)
-
-img1 = cv2.imread ('import\p19.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p19.png',temp1)
-
-img1 = cv2.imread ('import\p20.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p20.png',temp1)
-
-img1 = cv2.imread ('import\p21.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p21.png',temp1)
-
-img1 = cv2.imread ('import\p22.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p22.png',temp1)
-
-img1 = cv2.imread ('import\p23.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p23.png',temp1)
-
-img1 = cv2.imread ('import\p24.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p24.png',temp1)
-
-img1 = cv2.imread ('import\p25.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p25.png',temp1)
-
-img1 = cv2.imread ('import\p26.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p26.png',temp1)
-
-img1 = cv2.imread ('import\p27.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p27.png',temp1)
-
-img1 = cv2.imread ('import\p28.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p28.png',temp1)
-
-img1 = cv2.imread ('import\p29.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p29.png',temp1)
-
-img1 = cv2.imread ('import\p30.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p30.png',temp1)
-
-img1 = cv2.imread ('import\p31.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p31.png',temp1)
-
-img1 = cv2.imread ('import\p32.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p32.png',temp1)
-
-img1 = cv2.imread ('import\p33.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p33.png',temp1)
-
-img1 = cv2.imread ('import\p34.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p34.png',temp1)
-
-img1 = cv2.imread ('import\p35.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p35.png',temp1)
-
-img1 = cv2.imread ('import\p36.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p36.png',temp1)
-
-img1 = cv2.imread ('import\p37.jpg')
-temp1 = imageprocessing (img1)
-cv2.imwrite ('processedimages\p37.png',temp1)
+if __name__ == '__main__':
+    
+    img1 = cv2.imread ('import\p1.jpg')
+    temp1 = imageprocessing (img1)
+    cv2.imwrite ('processedimages\p1.jpg',temp1)
+    
+#    img1 = cv2.imread ('import\p2.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p2.png',temp1)
+#
+#    img1 = cv2.imread ('import\p3.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p3.png',temp1)
+#
+#    img1 = cv2.imread ('import\p4.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p4.png',temp1)
+#
+#    img1 = cv2.imread ('import\p5.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p5.png',temp1)
+#
+#    img1 = cv2.imread ('import\p6.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p6.png',temp1)
+#
+#    img1 = cv2.imread ('import\p7.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p7.png',temp1)
+#    
+#    img1 = cv2.imread ('import\p8.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p8.png',temp1)
+#
+#    img1 = cv2.imread ('import\p9.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p9.png',temp1)
+#
+#    img1 = cv2.imread ('import\p10.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p10.png',temp1)
+#
+#    img1 = cv2.imread ('import\p11.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p11.png',temp1)
+#    
+#    img1 = cv2.imread ('import\p12.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p12.png',temp1)
+#    
+#    img1 = cv2.imread ('import\p13.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p13.png',temp1)
+#
+#    img1 = cv2.imread ('import\p14.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p14.png',temp1)
+#
+#    img1 = cv2.imread ('import\p15.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p15.png',temp1)
+#
+#    img1 = cv2.imread ('import\p16.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p16.png',temp1)
+#
+#    img1 = cv2.imread ('import\p17.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p17.png',temp1)
+#
+#    img1 = cv2.imread ('import\p18.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p18.png',temp1)
+#
+#    img1 = cv2.imread ('import\p19.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p19.png',temp1)
+#
+#    img1 = cv2.imread ('import\p20.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p20.png',temp1)
+#
+#    img1 = cv2.imread ('import\p21.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p21.png',temp1)
+#
+#    img1 = cv2.imread ('import\p22.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p22.png',temp1)
+#
+#    img1 = cv2.imread ('import\p23.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p23.png',temp1)
+#
+#    img1 = cv2.imread ('import\p24.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p24.png',temp1)
+#
+#    img1 = cv2.imread ('import\p25.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p25.png',temp1)
+#
+#    img1 = cv2.imread ('import\p26.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p26.png',temp1)
+#
+#    img1 = cv2.imread ('import\p27.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p27.png',temp1)
+#
+#    img1 = cv2.imread ('import\p28.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p28.png',temp1)
+#
+#    img1 = cv2.imread ('import\p29.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p29.png',temp1)
+#
+#    img1 = cv2.imread ('import\p30.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p30.png',temp1)
+#    
+#    img1 = cv2.imread ('import\p31.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p31.png',temp1)
+#
+#    img1 = cv2.imread ('import\p32.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p32.png',temp1)
+#
+#    img1 = cv2.imread ('import\p33.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p33.png',temp1)
+#
+#    img1 = cv2.imread ('import\p34.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p34.png',temp1)
+#
+#    img1 = cv2.imread ('import\p35.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p35.png',temp1)
+#
+#    img1 = cv2.imread ('import\p36.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p36.png',temp1)
+#
+#    img1 = cv2.imread ('import\p37.jpg')
+#    temp1 = imageprocessing (img1)
+#    cv2.imwrite ('processedimages\p37.png',temp1)
 

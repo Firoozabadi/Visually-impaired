@@ -12,12 +12,13 @@ Second method: LSQ
 
 Done:
 
-imageprocessing.py:
+im_processing.py:
 
     1) makes images blured, gray scale
     2) makes similar the images with different qualities using "erosion" and "dilation"
     3) crop the images to the edge of the text for the close images
-    4) Modification of the cropping for the far images
+    4) Modification of the cropping for the far images (Canceled)
+    5)LSQ and im_processing as functions
     
     
 Lsqversion.py:
@@ -27,5 +28,7 @@ Lsqversion.py:
 
 To Do:
 
-    Finding the most suitable images to use as reference
-    Try to find the best kernel parameters to obtain the best fittings in different image qualities
+    *)continue to make LSQ function
+    1)Slightly rotated pictures: rotate it degree by degree to obtain a better fitting
+    2)Finding the most suitable images to use as reference
+    3)Try to find the best kernel parameters to obtain the best fittings in different image qualities
