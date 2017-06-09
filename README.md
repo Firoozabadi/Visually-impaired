@@ -21,14 +21,13 @@ im_processing.py:
     5)LSQ and im_processing as functions
     
     
-Lsqversion.py:
+LsQ function:
 
     compares references with the imported images using the "Least square fitting"
 
 
 To Do:
 
-    *)continue to make LSQ function
     1)Slightly rotated pictures: rotate it degree by degree to obtain a better fitting
-    2)Finding the most suitable images to use as reference
+    2)Preparing the images taken by the new camera and finding the most suitable images to use as reference
     3)Try to find the best kernel parameters to obtain the best fittings in different image qualities

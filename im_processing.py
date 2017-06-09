@@ -72,5 +72,5 @@ def im_processing (img):
     erosion= cv2.erode(img_thresh1,kernel2,iterations = 1)
     dilation  = cv2.dilate(erosion,kernel1,iterations = 1)
 
-    return final;
+    return dilation;
 

@@ -20,7 +20,7 @@ from PIL import Image, ImageFilter
 import PIL.ImageOps
 import glob, os
 
-import im_processing from im_processing
+from im_processing import im_processing
 
 
 #image importing and resizing
@@ -32,10 +32,12 @@ def LSQ (img):
     ref1 = cv2.imread("ref1.png")
     ref2 = cv2.imread("ref2.png")
     ref3 = cv2.imread("ref3.png")
+    ref4 = cv2.imread("ref4.png")
     
     reference1 = ref1[:,:,0]
     reference2 = ref2[:,:,0]
     reference3 = ref3[:,:,0]
+    reference4 = ref4[:,:,0]
     
     
     #-------------------------------------------------------------
@@ -50,10 +52,10 @@ def LSQ (img):
     dev3 = np.sum(temp3)
     dev4 = np.sum(temp4)
     
-    print (dev1)
-    print (dev2)
-    print (dev3)
-    print (dev4)
+    print ("dev1 = ", dev1)
+    print ("dev2 = ", dev2)
+    print ("dev3 = ", dev3)
+    print ("dev4 = ", dev4)
     
     if dev1 == min(dev1, dev2, dev3, dev4):
 #        print("BITTE WÄHLEN")
@@ -66,16 +68,16 @@ def LSQ (img):
     elif dev3 == min(dev1, dev2, dev3, dev4):
 #        print("PFLEGE DRÜCKEN")
         result = "PFLEGE DRÜCKEN"
+        
     elif dev4 == min(dev1, dev2, dev3, dev4):
 #        print("PFLEGE DRÜCKEN")
         result = "Wassera tank fullen"
-    else:
-#        print("please try again")
-        result = "PFLEGE DRÜCKEN"
-        
-    return result;
+
+    else :
+#        print("PFLEGE DRÜCKEN")
+        result = "Please try again"
+    
+    return str(result);
     
 
-img1 = cv2.imread ("p1.jpg")
-temp5 = LSQ (img1)
-print temp5
+
