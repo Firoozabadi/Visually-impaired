@@ -23,17 +23,6 @@ import glob, os
 text1 = open ("tesseract.txt", "r")
 text = text1.read(5)
 
-#if saleh3 == "EITTE" or "BITTE":
-#    print("BITTE WÄHLEN")
-#
-#elif saleh3 == "GERIT" or "whatever similar":
-#    print("GERÄT HEIZT AUF")
-#
-#elif saleh3 == "PFLIO" or "whatever similar":
-#    print("PFLEGE DRÜCKEN)")
-#
-#else:
-#    print("please try again")
 
 if text == "EITTE" or text == "BITTE":
     print("BITTE WÄHLEN")
